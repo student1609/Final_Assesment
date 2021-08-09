@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Jungwook  Kweon</title>
+    <link rel="stylesheet" href="normalize.css">
+    <script src="info.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="header">
+        <a href="#default" class="logo"><img src="logo.png" height="50" width="200" alt="CompanyLogo"></a>
+        <div class="header-center">
+            <h2>  ONLINE STORE  </h2>
+        </div>
+    </div>
+
+
+    <div class="sidenav">
+        <a href="honesty.html">Honesty</a>
+        <a class="active" href="#info">INFO</a>
+        <a href="reflection.html">Reflection</a>
+
+    </div>
+
+    <div class="main">
+        <h2>Sign Up</h2>
+        <section>
+
+            <div id="formcontainer">
+                <form id="registerdetails" action="https://httpbin.org/post" onsubmit="return validateForm()">
+                    <div>
+                        <label for="firstname">First Name:</label><br>
+                        <input type="hidden" name="FirstName" id="firstName" value="Jungwook" />
+                        <label for="lastname">Last Name:</label><br>
+                        <input type="hidden" name="LastName" id="Lastnaem" value="Kweon" />
+                    </div>
+
+                    <div>
+                        <label for="password">
+                            Password:
+                        </label>
+                        <input type="password" id="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$">
+
+                    </div>
+                    <div>
+                        <label for="username">Userame:</label>
+                        <input type="text" id="username">
+                    </div>
+                    <div>
+                        <label for="Education">Education Level: </label>
+
+                        <select>
+                            <option value="" disabled selected>-Select-</option>
+                            <option value="">Technical Diploma</option>
+                            <option value="">College Diploma</option>
+                            <option value="">Bachelor's Degree</option>
+                            <option value=""> Master's Degree</option>
+                            <option value="">Others</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="Education">Education Status: </label><br>
+                        <input type="radio" id="Graduated" name="Status"> Graduated<br />
+                        <input type="radio" id="Current enrolled" name="Status"> Current enrolled<br />
+                        <input type="radio" id="Did not graduate" name="Status"> Did not graduate<br />
+                    </div>
+                    <div>
+                        <label for="email">Email: </label>
+                        <input type="email" id="email" name="email">
+                    </div>
+
+                    <div>
+                        <label for="Age">Age: </label>
+                        <input type="text" id="txtAge" oninput="ageValidation()">
+                    </div>
+
+                    <br />
+
+                    <button type="submit" id="registerButton">Submit</button>
+                </form>
+</div>
+        </section>
+
+
+    </div>
+
+
+    <footer>
+        <p>
+            Name: Jungwook  Kweon<br>
+        </p>
+    </footer>
+</body>
+</html>
